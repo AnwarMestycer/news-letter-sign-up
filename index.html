@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,700;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+  <script src="/script.js"></script>
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+
+</head>
+
+<body class="font-inter lg:p-10 lg:bg-blue-900">
+  <main id="main" class="flex flex-col items-center gap-8 lg:bg-white lg:flex-row-reverse lg:rounded-lg lg:p-5 ">
+    <img class="w-full rounded-bl-lg rounded-br-lg lg:rounded-lg lg:w-6/12 lg:h-fit"
+      src="/assets/images/illustration-sign-up-desktop.svg" alt="">
+    <section class="p-6 gap-4">
+      <!-- Sign-up form start -->
+      <h1 class=" text-5xl font-bold ml-0 mb-1 lg:mb-5">Stay updated!</h1>
+      <p class="text-xl ml-0 mb-4">Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <div class="text-xl ml-0 lg:mb-3">
+        <div class="flex items-center gap-3 ml-0 lg:mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            <g fill="none">
+              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+              <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+            </g>
+          </svg>
+          Product discovery and building what matters
+        </div>
+        <div class="flex items-center gap-3 ml-0 lg:mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            <g fill="none">
+              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+              <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+            </g>
+          </svg>
+          Measuring to ensure updates are a success
+        </div>
+        <div class="flex items-center gap-3 ml-0 lg:mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+            <g fill="none">
+              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+              <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+            </g>
+          </svg>
+          And much more!
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 mt-4">
+        <label class="text-xl font-bold" for="input-email">
+          Email address:
+        </label>
+        <input class="p-6 h-15 border border-gray-500 lg:mb-3 text-gray-900 text-xl rounded-lg" id="email"
+          placeholder="email@company.com">
+        <p id="error-alert" class="text-red-500 mt-0 self-end lg:mb-0 hidden">Valid email required</p>
+        <button
+          class="submitButton h-20 rounded-md bg-blue-900 p-6  text-white text-center text-xl font-bold hover:bg-blue-400"
+          onclick="handleButtonClick()">
+          Subscribe to monthly newsletter
+        </button>
+      </div>
+    </section>
+  </main>
+  <div id="success-box"
+    class="w-full h-full md:h-fit md:w-[504px] lg:h-[520px] bg-white text-basic font-medium md:rounded-[35px] p-5 md:py-12 md:px-16 md:flex-row duration-100 opacity-0 scale-100 delay-100 pt-[20vh] pb-5 hidden">
+    <div class="w-full h-full flex flex-col justify-between gap-5 md:block md:mt-0">
+      <div class="mb- md:mb-11">
+        <img src="./assets/images/icon-success.svg" alt="success" class="w-16 h-16 object-contain mb-9 md:mb-11" />
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 md:mb-8 tracking-tight">
+          Thanks for subscribing!
+        </h1>
+        <p class="font-medium">
+          A confirmation email has been sent to
+          <span class="the-email font-bold"></span>. Please open it and
+          click the button inside to confirm your subscription
+        </p>
+      </div>
+      <button class="h-20 rounded-md bg-blue-900 p-4  text-white text-center text-xl font-bold hover:bg-blue-400" onclick="back()">
+        Dismiss message
+      </button>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

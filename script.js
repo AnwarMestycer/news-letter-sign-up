@@ -3,12 +3,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainContainer = document.getElementById("main");
   const successBox = document.getElementById("success-box");
   const theEmailField = document.querySelector(".the-email");
+  const image = document.getElementById("image")
   errorAlert.style.display = "none";
+
+function imageAdjust (){
+
+  if (window.matchMedia("(max-width: 900px)").matches) {
+    image.src="/assets/images/illustration-sign-up-mobile.svg"
+  }
+  else{
+    image.src="/assets/images/illustration-sign-up-desktop.svg"
+  }
+}
+
+window.onload = imageAdjust;
+window.onresize = imageAdjust;
 
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
+
 
   handleButtonClick = () => {
     const emailInput = document.getElementById("email");

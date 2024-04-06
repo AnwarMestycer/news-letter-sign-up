@@ -16,21 +16,20 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <title>Newsletter</title>
 
 
 </head>
 
-<body class="font-inter lg:p-10 lg:bg-blue-900">
-  <main id="main" class="flex flex-col items-center gap-8 lg:bg-white lg:flex-row-reverse lg:rounded-lg lg:p-5 ">
-    <img class="w-full rounded-bl-lg rounded-br-lg lg:rounded-lg lg:w-6/12 lg:h-fit"
+<body class="font-inter lg:bg-blue-900 flex justify-center items-center lg:p-10">
+  <div id="main"
+    class="flex flex-col items-center gap-5 lg:h-fit lg:bg-white lg:flex-row-reverse lg:rounded-2xl lg:p-4 lg:w-10/12">
+    <img id="image" class="w-full rounded-bl-lg rounded-br-lg lg:rounded-lg lg:w-6/12 lg:h-fit"
       src="/assets/images/illustration-sign-up-desktop.svg" alt="">
-    <section class="p-6 gap-4">
-      <!-- Sign-up form start -->
-      <h1 class=" text-5xl font-bold ml-0 mb-1 lg:mb-5">Stay updated!</h1>
+    <section class="p-6 flex flex-col gap-8">
+      <h1 class=" text-5xl font-bold">Stay updated!</h1>
       <p class="text-xl ml-0 mb-4">Join 60,000+ product managers receiving monthly updates on:</p>
-
-      <div class="text-xl ml-0 lg:mb-3">
+      <div class="text-xl">
         <div class="flex items-center gap-3 ml-0 lg:mb-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
             <g fill="none">
@@ -63,9 +62,9 @@
         <label class="text-xl font-bold" for="input-email">
           Email address:
         </label>
-        <input class="p-6 h-15 border border-gray-500 lg:mb-3 text-gray-900 text-xl rounded-lg" id="email"
+        <input class="p-6 h-15 border border-gray-500 text-gray-900 text-xl rounded-lg" id="email"
           placeholder="email@company.com">
-        <p id="error-alert" class="text-red-500 mt-0 self-end lg:mb-0 hidden">Valid email required</p>
+        <p id="error-alert" class="text-red-500 self-end lg:mb-0 hidden">Valid email required</p>
         <button
           class="submitButton h-20 rounded-md bg-blue-900 p-6  text-white text-center text-xl font-bold hover:bg-blue-400"
           onclick="handleButtonClick()">
@@ -73,7 +72,7 @@
         </button>
       </div>
     </section>
-  </main>
+  </div>
   <div id="success-box"
     class="w-full h-full md:h-fit md:w-[504px] lg:h-[520px] bg-white text-basic font-medium md:rounded-[35px] p-5 md:py-12 md:px-16 md:flex-row duration-100 opacity-0 scale-100 delay-100 pt-[20vh] pb-5 hidden">
     <div class="w-full h-full flex flex-col justify-between gap-5 md:block md:mt-0">
